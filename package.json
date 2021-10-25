@@ -1,0 +1,22 @@
+{
+  "name": "express-movie-quotes",
+  "version": "1.0.0",
+  "description": "Generate movie quotes",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error && exit 1"
+  },
+  "author": "Tony Johansson",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "popular-movie-quotes": "^1.2.4"
+  }
+}
+

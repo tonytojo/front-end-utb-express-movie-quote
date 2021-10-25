@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie quotes</title>
+  </head>
+  <body>
+    <h1>Movie quotes here</h1>
+    <div class="container">
+      <form action="#" id="my-form">
+        <div>
+          <div class="row">
+            <div class="col-25">
+              <label for="movie">Movie name</label>
+            </div>
+
+            <div
+              class="col-75"
+              title="Enter a movie name or part of a movie name">
+              <input type="text" id="movie" name="movie" />
+            </div>
+          </div>
+
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="year">Year</label>
+            </div> 
+            <div
+              class="col-75"
+              title="Enter the year when the movie waswpublished">
+              <input type="text" id="year" name="year" />
+            </div>
+          </div>
+
+          <div class="row">
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </form>
+
+
+     <div>
+        <img src="cinema.jpg" alt="En biograf" />
+      </div>
+    </div>
+    <!-- end container -->
+
+   
+    <table id="myTable" class="movie-list"></table>
+    <div id="info"></div>
+
+    <footer>
+      <p style="text-align: center;">Made by Tony Johansson 2021-10-22</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

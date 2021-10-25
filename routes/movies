@@ -1,0 +1,46 @@
+const router = require('express').Router();
+const popMovie = require('popular-movie-quotes');
+
+// url= localhost:3000/movies/search
+router.get('/', (req, res) => {
+  console.log('Root url movies');
+});
+
+// url= localhost:3000/movies/search/:movie/:year
+// Both year and movie is given
+router.get('/movie/:movie/year/:year', (req, res) => {
+  let result = popMovie.getAll().filter(item => {
+    if (parseInt(item.year) ===  parseInt(req.params.year) || item.movie.toLowerCase() ===  req.params.movie.toLowerCase() ||
+        item.movie.toLowerCase().includes(req.params.movie))
+      return item;
+  });
+
+  res.json(result);
+});
+
+// url= localhost:3000/movies/search/movie/:movie
+// Only movie is given
+router.get('/movie/:movie', (req, res) => {
+
+  let result = popMovie.getAll().filter(item => {
+    if ( item.movie.toLowerCase() ===  req.params.movie.toLowerCase() || item.movie.toLowerCase().includes(req.params.movie.toLowerCase()))
+      return item;
+  });
+
+  
+  res.json(result);
+});
+
+// url= localhost:3000/movies/search/year/:year
+// Only year is given
+router.get('/year/:year', (req, res) => {
+
+  let result = popMovie.getAll().filter(item => {
+    if (parseInt(item.year) ===  parseInt(req.params.year))
+      return item;
+  });
+
+  res.json(result);
+});
+
+module.exports = router;
